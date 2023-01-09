@@ -1,0 +1,21 @@
+ String 클래스 기본 메서드에 대해서 알아보자.
+ 
+ 문자열 동일성 검사 : equals 사용 
+ boolean equals = str1.equals(str2); > true or false
+ 
+ 문자열 사전식 순서 : compareTo 사용
+ int result = str1.compareTo(str2); > 0보다 크면 str1이 str2보다 길다, 0이면 같다, 0보다 작으면 str2가 더 길다
+ 
+ 문자열 길이 알기 : length 사용
+ int length - str.length(); > str의 길이를 알려줌
+ 
+ 특정 위치의 문자 : char charAt(int) 사용
+ char ch = str.charAt(2) > 이고 str= "ABCDEFG"; 라면 인덱스 순으로 2인 C가 나온다.
+ 
+ 지정한 문자의 위치 검색 : int indexOf(char) 사용
+ String str ="abcdef" 이고, int index = str.indexOf("d"); 라면 str에서의 d의 위치인 4를, 만약 없으면 -1을 반환
+ 
+ 지정된 범위의 부분 문자열 검색 : String substring(int, int) 사용
+ ★ 주의 : String str = "ABCDEF"; 이고, String substr = str.substring(0,2); 라면
+ substring 0은 폐구간이라 0이 시작이지만 2는 개구간이라 2포함이 아닌 2 앞까지만 된다.
+ 고로 AB 까지만 substr에 저장된다.
